@@ -49,7 +49,7 @@ namespace MyClientApp
                 options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = "oidc";
             }).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme)
-              .AddOpenIdConnect(options =>
+              .AddOpenIdConnect("oidc", options =>
               {
                   options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                   options.Authority = "https://localhost:44303";

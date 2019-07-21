@@ -37,7 +37,7 @@ namespace ImageGallery.Client
                 options.DefaultScheme = "Cookies";
                 options.DefaultChallengeScheme = "oidc";
             }).AddCookie("Cookies")
-              .AddOpenIdConnect(options =>
+              .AddOpenIdConnect("oidc", options =>
               {
                   options.SignInScheme = "Cookies";
                   options.Authority = "https://localhost:44303";

@@ -68,17 +68,15 @@ namespace Luka.IdentityProvider
                 {
                     ClientName = "Image Gallery",
                     ClientId = "imagegalleryclient",
-                    AllowedGrantTypes = new List<string>
-                    {
-                        GrantType.Hybrid
-                    },
+                    AllowedGrantTypes = GrantTypes.Hybrid,
                     RedirectUris = new List<string>
                     {
                         "https://localhost:44371/signin-oidc",
                     },
                     AllowedScopes =
                     {
-                        IdentityServerConstants.StandardScopes.OpenId
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile
                     },
                     ClientSecrets =
                     {
