@@ -179,5 +179,10 @@ namespace MyClient.Controllers
                 Debug.WriteLine($"Claim type: {claim.Type} - Claim value: {claim.Value}");
             }
         }
+
+        public async Task Logout()
+        {
+            await HttpContext.SignOutAsync("Cookies");
+        }
     }
 }

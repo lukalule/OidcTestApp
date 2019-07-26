@@ -43,6 +43,7 @@ namespace ImageGallery.Client
                   options.Authority = "https://localhost:44303";
                   options.ClientId = "imagegalleryclient";
                   options.ResponseType = "code id_token";
+                  
                   options.Scope.Add("openid");
                   options.Scope.Add("profile");
                   options.SaveTokens = true;

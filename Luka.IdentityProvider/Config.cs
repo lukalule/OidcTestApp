@@ -68,10 +68,15 @@ namespace Luka.IdentityProvider
                 {
                     ClientName = "Image Gallery",
                     ClientId = "imagegalleryclient",
-                    AllowedGrantTypes = GrantTypes.Hybrid,
+                    AllowedGrantTypes = GrantTypes.Hybrid,                    
                     RedirectUris = new List<string>
                     {
-                        "https://localhost:44371/signin-oidc",
+                        "https://localhost:44377/signin-oidc"
+                    },
+                    PostLogoutRedirectUris = new List<string>
+                    {
+                         "https://localhost:44377/signout-callback-oidc",
+
                     },
                     AllowedScopes =
                     {
